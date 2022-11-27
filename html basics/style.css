@@ -1,0 +1,29 @@
+h1{
+    color: blue;
+}
+
+#header{
+    color: coral;
+}
+
+th{
+    color: green;
+}
+
+#price{
+    color: brown;
+}
+
+#middle{
+    display:inline;
+    font-size: 0.75em;
+}
+
+h2>span{
+    color: #FA9F42;
+    font-size: 0.75em;
+}
+
+table, th, td {
+    border: 1px solid rgb(209, 12, 213);
+}
