@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 
-const db =  mongoose.connect('mongodb+srv://rdevanshshukla26:6eeo88EMZ9h0WNoy@cluster0.baqjzal.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+const db =  mongoose.connect('mongodb+srv://rdevanshshukla26:<Password>@cluster0.baqjzal.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log('Connected to MongoDB');
 });
 
