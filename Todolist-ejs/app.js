@@ -1,6 +1,10 @@
 const app = require('express')();
 const bodyparser = require('body-parser');
 const ejs = require('ejs');
+const mongoose = require('mongoose');
+const db = mongoose.connect('mongodb+srv://rdevanshshukla26:<Password>@cluster0.baqjzal.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}).then (() =>{
+    console.log('Connected to DB');
+});
 
 app.set('view engine', 'ejs');
 app.use(bodyparser.urlencoded({extended: true}));
@@ -13,10 +17,16 @@ app.get('/', (req, res) => {
     res.render("list", {KindOfDay: day, newListItems: newItems});
 }); 
 
+const Userschema = new mongoose.Schema({
+    newItem:{
+        type: String,}
+});
+
 app.post('/', (req, res) => {
     let newItem = req.body.newItem;
     newItems.push(newItem);
     res.redirect('/');
+    
 })
 
 app.listen(3000, () => {
