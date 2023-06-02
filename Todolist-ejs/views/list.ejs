@@ -10,11 +10,11 @@
     <h1> <%= KindOfDay %> </h1>
     <ul>
         <li> Roshan </li>
-        <% for(i = 0; i < newListItems.lenth; i++){ %>
+    <% for(i = 0; i < newListItems.lenth; i++){ %>
             <li> <%= newListItems[i] %> </li>
        <% } %>
         <form action="/" method="post">
-            <input type="text" name="newItem" autocomplete="off">
+            <input type="text" name = "newItem" autocomplete="off">
             <button type="submit">Add</button>
         </form>
     </ul>

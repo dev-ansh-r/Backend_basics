@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     let today = new Date();
     let day = today.toLocaleDateString('en-US',Options);
     res.render("list", {KindOfDay: day, newListItems: newItems});
-});
+}); 
 
 app.post('/', (req, res) => {
     let newItem = req.body.newItem;
